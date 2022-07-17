@@ -1,0 +1,9 @@
+@import 'src/style/colorVariables';
+
+.title {
+  color: $firstTitle;
+  font-size: 3.125rem;
+  font-weight: 900;
+  line-height: 3.9rem;
+  text-align: start;
+}

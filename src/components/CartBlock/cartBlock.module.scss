@@ -1,0 +1,15 @@
+.cartBlock {
+  height: 47.9rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+}

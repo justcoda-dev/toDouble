@@ -1,0 +1,13 @@
+@import 'src/style/colorVariables';
+
+.list {
+  display: flex;
+  align-items: center;
+
+  .item {
+    text-decoration: none;
+    margin: 0 1.1rem;
+    color: $fontWhite;
+    font-weight: 600;
+  }
+}

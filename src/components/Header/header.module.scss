@@ -1,0 +1,19 @@
+@import 'src/style/colorVariables';
+
+.header {
+  background: $blue;
+  padding: 1.1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+  }
+
+  .navigation {
+    display: flex;
+  }
+}
