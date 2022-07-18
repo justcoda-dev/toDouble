@@ -1,0 +1,41 @@
+.background {
+  height: 724px;
+
+  .container {
+    margin-top: 180px;
+    margin-bottom: 180px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 50%;
+      min-width: 300px;
+
+      .title {
+        margin-bottom: 50px;
+        text-align: start;
+      }
+
+      .text {
+        text-align: start;
+        margin-bottom: 45px;
+      }
+      
+    }
+
+    .imageBlock {
+      width: 50%;
+      min-width: 300px;
+
+      .image {
+        max-width: 690px;
+        max-height: 480px;
+      }
+
+    }
+
+  }
+}

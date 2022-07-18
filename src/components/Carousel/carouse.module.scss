@@ -1,0 +1,74 @@
+@import "src/style/colorVariables";
+
+.background {
+  .display {
+    display: flex;
+    justify-content: center;
+min-height: 394px;
+
+    .item {
+      max-width: 694px;
+      padding: 60px 0;
+      border: 2px solid $blue;
+      border-radius: 0.9rem;
+      display: none;
+    }
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      max-width: 50%;
+
+      .title {
+
+        text-align: start;
+      }
+
+      .text {
+        text-align: start;
+      }
+    }
+
+    .imageBlock {
+      max-width: 250px;
+      max-height: 250px;
+
+      .image {
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+
+      }
+    }
+
+    .show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+
+  }
+
+  .buttons {
+    margin-top: 102px;
+
+    .button {
+      position: relative;
+      margin: 0.9rem;
+      font-size: 20px;
+      width: 60px;
+      height: 60px;
+      background: none;
+      border: 2px solid $blue;
+      border-radius: 15px;
+      cursor: pointer;
+
+    }
+  }
+
+}

@@ -20,7 +20,7 @@ const CartBlock = () => {
       <Container parentClass={scss.container}>
         <div className={scss.inner}>
           <FirstTitle>Разработка интернет-магазина с нуля за неделю</FirstTitle>
-          <Text>
+          <Text small>
             Дизайн интернет магазина, элементов микро UX, корзин, личного
             кабинета - от фирменного стиля до пользовательского интерфейса в
             сжатые сроки с командой Virtual Designers

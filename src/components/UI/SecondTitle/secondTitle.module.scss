@@ -1,2 +1,8 @@
+@import "src/style/colorVariables";
 .title {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color:$fontDark ;
 }

@@ -1,0 +1,13 @@
+@import "src/style/colorVariables";
+
+.background {
+  background: $lightBlue;
+
+  .container {
+    padding: 120px 0;
+
+    .title {
+      margin-bottom: 50px;
+    }
+  }
+}
