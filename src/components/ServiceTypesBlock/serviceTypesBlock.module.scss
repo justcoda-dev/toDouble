@@ -2,9 +2,18 @@
 @import 'src/style/media';
 
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
   background: $lightBlue;
+
+  .figure {
+    position: absolute;
+    right: 7%;
+    bottom: 50px;
+    width: 133px;
+    height: 148px;
+  }
 
   .container {
     padding: 120px 0;
@@ -14,16 +23,30 @@
     margin-bottom: 3.125rem;
   }
 }
+
+
+
 @media screen and (max-width: $xs) {
   .background {
+    .figure {
+      display: none;
+    }
     .container {
       padding-top: 16px;
       padding-bottom: 30px;
     }
   }
 }
+
 @media screen and (min-width: $xs) and (max-width: $xm) {
   .background {
+    .figure {
+      display: none;
+    }
+    .figure {
+      display: none;
+    }
+
     .container {
       padding-top: 16px;
       padding-bottom: 30px;
@@ -33,6 +56,9 @@
 
 @media screen and (min-width: $xm) and (max-width: $xl) {
   .background {
+    .figure {
+      display: none;
+    }
     .container {
       padding-top: 16px;
       padding-bottom: 30px;
@@ -42,6 +68,13 @@
 
 @media screen and (min-width: $xl) and (max-width: $xxl) {
   .background {
+    .figure {
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+      width: 123px;
+      height: 128px;
+    }
     .container {
     }
   }

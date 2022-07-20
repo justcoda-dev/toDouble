@@ -3,6 +3,7 @@ import ExampleCardItem from './ExampleCardItem';
 import { HOST } from '../../App';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import debounce from '../../functions/debounce';
+import { arrayToArrays } from '../../functions/ArrayToArrays';
 
 const list = [
   {
@@ -43,15 +44,6 @@ const list = [
   },
 ];
 
-const arrayToArrays = (list, size) => {
-  return list.reduce((prev, current) => {
-    if (prev[prev.length - 1].length === size) {
-      prev.push([]);
-    }
-    prev[prev.length - 1].push(current);
-    return prev;
-  }, [[]]);
-};
 
 const ExampleCardList = () => {
   const [mobile, setMobile] = useState(false);
@@ -96,11 +88,15 @@ const ExampleCardList = () => {
 
   return (
     <ul className={scss.list}>
-      {mobile ? page.map((item) => (
-        <ExampleCardItem key={item.id} item={item} />
-      )) : list.map((item) => (
-        <ExampleCardItem key={item.id} item={item} />
-      ))}
+      {
+        mobile
+          ? page.map((item) => (
+            <ExampleCardItem key={item.id} item={item} />
+          ))
+          : list.map((item) => (
+            <ExampleCardItem key={item.id} item={item} />
+          ))
+      }
       <div className={scss.buttons}>
         <button
           onClick={previousImageHandle}
@@ -111,6 +107,7 @@ const ExampleCardList = () => {
           }}
           className={scss.button}
         />
+
         <button
           onClick={nextImageHandle}
           style={{

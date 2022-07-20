@@ -1,15 +1,31 @@
 @import 'src/style/media';
 
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
 
+  .sphere {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: -20px;
+    right: 20px;
+  }
+
   .container {
+    position: relative;
     margin-top: 216px;
     margin-bottom: 180px;
     display: flex;
-    position: relative;
     flex-wrap: wrap;
+
+    .imageBlock {
+      position: absolute;
+      width: 690px;
+      height: 480px;
+      right: -100px;
+    }
 
     .textBlock {
       display: flex;
@@ -29,16 +45,6 @@
       }
     }
 
-    .imageBlock {
-      position: absolute;
-      right: 0;
-      width: 50%;
-
-      .image {
-        max-width: 690px;
-        max-height: 480px;
-      }
-    }
   }
 }
 
@@ -52,22 +58,20 @@
       margin-top: 0;
       margin-bottom: 0;
 
+      .imageBlock {
+
+        position: relative;
+        width: 80%;
+        height: 176px;
+        right: 0;
+      }
+
       .textBlock {
         align-items: center;
 
         .title {
           text-align: center;
           margin: 30px 0;
-        }
-      }
-
-      .imageBlock {
-        position: relative;
-        width: 100%;
-
-        .image {
-          max-width: 260px;
-          max-height: 181px;
         }
       }
     }
@@ -84,6 +88,13 @@
       margin-top: 0;
       margin-bottom: 0;
 
+      .imageBlock {
+        position: relative;
+        width: 80%;
+        height: 176px;
+        right: 0;
+      }
+
       .textBlock {
         align-items: center;
 
@@ -93,28 +104,28 @@
         }
       }
 
-      .imageBlock {
-        position: relative;
-        width: 100%;
 
-        .image {
-          max-width: 330px;
-          max-height: 251px;
-        }
-      }
     }
   }
 }
 
 @media screen and (min-width: $xm) and (max-width: $xl) {
   .background {
+    .sphere {
+      display: none;
+    }
     .container {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
-      //padding: 40px 0;
       margin-top: 70px;
       margin-bottom: 70px;
+
+      .imageBlock {
+        position: relative;
+        width: 460px;
+        height: 250px;
+      }
 
       .textBlock {
         align-items: center;
@@ -123,29 +134,27 @@
           text-align: center;
         }
       }
-
-      .imageBlock {
-        position: relative;
-        width: 100%;
-
-        .image {
-          max-width: 450px;
-          max-height: 371px;
-        }
-      }
     }
   }
 }
 
 @media screen and (min-width: $xl) and (max-width: $xxl) {
   .background {
+    .sphere {
+      display: none;
+    }
+
     .container {
-      .imageBlock {
-        .image {
-          max-width: 600px;
-          max-height: 400px;
-        }
-      }
+    }
+  }
+}
+@media screen and (min-width: $xxl) {
+  .background {
+    .sphere {
+      display: none;
+    }
+
+    .container {
     }
   }
 }

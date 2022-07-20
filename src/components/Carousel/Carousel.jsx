@@ -58,23 +58,30 @@ const Carousel = () => {
   return (
     <div className={scss.background}>
       <div className={scss.display}>
-        {list.map((item) => (
-          <div
-            className={classNames({
-              [scss.item]: true,
-              [scss.show]: item.id === showItem,
-            })}
-            key={item.id}
-          >
-            <div className={scss.textBlock}>
-              <ThirdTitle parentClass={scss.title}>{item.title}</ThirdTitle>
-              <Text parenClass={scss.text}>{item.text}</Text>
+        {
+          list.map((item) => (
+            <div
+              className={classNames({
+                [scss.item]: true,
+                [scss.show]: item.id === showItem,
+              })}
+              key={item.id}
+            >
+              <div className={scss.textBlock}>
+                <ThirdTitle
+                  parentClass={scss.title}>{item.title}
+                </ThirdTitle>
+
+                <Text parenClass={scss.text}>{item.text}</Text>
+              </div>
+
+              <div className={scss.imageBlock}>
+                <img className={scss.image} src={`${HOST}${item.image}`} alt='' />
+              </div>
+
             </div>
-            <div className={scss.imageBlock}>
-              <img className={scss.image} src={`${HOST}${item.image}`} alt='' />
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
       <div className={scss.buttons}>
@@ -87,6 +94,7 @@ const Carousel = () => {
           }}
           className={scss.button}
         />
+
         <button
           onClick={nextImageHandle}
           style={{
@@ -97,6 +105,7 @@ const Carousel = () => {
           className={scss.button}
         />
       </div>
+
     </div>
   );
 };

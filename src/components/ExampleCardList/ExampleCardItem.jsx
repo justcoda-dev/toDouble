@@ -6,8 +6,11 @@ import { useCallback, useState } from 'react';
 
 const ExampleCardItem = ({ item }) => {
   const [hover, setHover] = useState(false);
+
   const hoverHandleOver = useCallback(() => setHover(true), [hover]);
+
   const hoverHandleLeave = useCallback(() => setHover(false), [hover]);
+
   return (
     <li
       onMouseLeave={hoverHandleLeave}
@@ -20,7 +23,7 @@ const ExampleCardItem = ({ item }) => {
           <Text parenClass={scss.text}>{item.text}</Text>
         </div>
       ) : (
-        <img className={scss.image} src={`${HOST}${item.image}`} alt="" />
+        <img className={scss.image} src={`${HOST}${item.image}`} alt='' />
       )}
     </li>
   );

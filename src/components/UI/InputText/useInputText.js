@@ -14,7 +14,6 @@ const useInputText = ({ initialStateText = '', validationSchema }) => {
 
   const handleChange = useCallback(
     ({ target: { value } }) => {
-      console.log(value);
       setValue(value);
       if (validationSchema) {
         setTextError(inputValidate(value, validationSchema));

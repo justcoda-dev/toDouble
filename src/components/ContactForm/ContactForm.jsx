@@ -6,6 +6,7 @@ import scss from './contactForm.module.scss';
 import { emailSchema, nameSchema, phoneSchema } from './validation';
 
 const ContactForm = () => {
+
   const {
     value: nameValue,
     textError: nameError,
@@ -26,37 +27,47 @@ const ContactForm = () => {
     handleChange: emailHandleChange,
     clearInput: emailClear,
   } = useInputText({ initialStateText: '', validationSchema: emailSchema });
+
   const sendFormHandle = useCallback(
     (e) => {
       e.preventDefault();
       console.log({ nameValue, phoneValue, emailValue });
+      clearInputs();
+
     },
     [nameValue, phoneValue, emailValue],
   );
+
+  const clearInputs = useCallback(() => {
+    emailClear();
+    nameClear();
+    phoneClear();
+  }, [emailValue, nameValue, phoneValue]);
+
   return (
-    <form className={scss.form} action="submit" onSubmit={sendFormHandle}>
+    <form className={scss.form}  onSubmit={sendFormHandle}>
       <InputText
         onChange={nameHandleChange}
         value={nameValue}
         error={nameError}
         helpText={nameError}
-        placeholder="Имя"
+        placeholder='Имя'
       />
       <InputText
         onChange={phoneHandleChange}
         value={phoneValue}
         error={phoneError}
         helpText={phoneError}
-        placeholder="Telegram/Viber"
+        placeholder='Telegram/Viber'
       />
       <InputText
         onChange={emailHandleChange}
         value={emailValue}
         error={emailError}
         helpText={emailError}
-        placeholder="Email"
+        placeholder='Email'
       />
-      <Button type="submit">отправить</Button>
+      <Button type='submit'>отправить</Button>
     </form>
   );
 };

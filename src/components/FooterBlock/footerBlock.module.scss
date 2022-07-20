@@ -101,16 +101,35 @@
 
 @media screen and (min-width: $xl) and (max-width: $xxl) {
   .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     .container {
+      width: 100%;
+
       .contacts {
         flex-direction: row;
         align-content: space-between;
+      }
+    }
+  }
+}
 
-        .social {
-        }
+@media screen and (min-width: $xxl) {
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .logo {
-        }
+    .container {
+      width: 100%;
+
+      .contacts {
+        flex-direction: row;
+        align-content: space-between;
       }
     }
   }

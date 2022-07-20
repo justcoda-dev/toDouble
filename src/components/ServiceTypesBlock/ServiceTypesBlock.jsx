@@ -2,6 +2,7 @@ import Container from '../Container/Container';
 import SecondTitle from '../UI/SecondTitle/SecondTitle';
 import scss from './serviceTypesBlock.module.scss';
 import AccordionList from '../UI/AccordionList/AccordionList';
+import Figure from '../Figure.jsx/Figure';
 
 const ServiceTypesBlock = () => {
   return (
@@ -12,6 +13,7 @@ const ServiceTypesBlock = () => {
         </SecondTitle>
         <AccordionList />
       </Container>
+      <Figure src='images/bag.png' parentClass={scss.figure} />
     </div>
   );
 };

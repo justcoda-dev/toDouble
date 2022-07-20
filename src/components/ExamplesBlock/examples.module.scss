@@ -2,9 +2,26 @@
 @import 'src/style/media';
 
 .background {
+  position: relative;
   display: flex;
   justify-content: center;
   background: $lightBlue;
+
+  .wave {
+    position: absolute;
+    width: 130px;
+    height: 189px;
+    left: 10px;
+    top: 300px;
+  }
+
+  .sphere {
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    right: 5%;
+    bottom: 300px;
+  }
 
   .container {
     padding: 120px 0;
@@ -17,6 +34,15 @@
 
 @media screen and (max-width: $xs) {
   .background {
+
+    .wave {
+      display: none;
+    }
+
+    .sphere {
+      display: none;
+    }
+
     .container {
       padding: 0;
     }
@@ -25,8 +51,31 @@
 
 @media screen and (min-width: $xs) and (max-width: $xm) {
   .background {
+    .wave {
+      display: none;
+    }
+
+    .sphere {
+      display: none;
+    }
+
     .container {
       padding: 0;
     }
   }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    .wave {
+      display: none;
+    }
+
+    .sphere {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
 }

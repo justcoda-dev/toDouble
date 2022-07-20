@@ -3,11 +3,12 @@ import Container from '../Container/Container';
 import SecondTitle from '../UI/SecondTitle/SecondTitle';
 import Text from '../UI/Text/Text';
 import Button from '../UI/Button/Button';
-import { HOST } from '../../App';
+import Figure from '../Figure.jsx/Figure';
 
 const InfoBlock = () => {
   return (
     <div className={scss.background}>
+      <Figure src="images/sphere.png" parentClass={scss.sphere}/>
       <Container parentClass={scss.container}>
         <div className={scss.textBlock}>
           <SecondTitle parentClass={scss.title}>
@@ -21,13 +22,7 @@ const InfoBlock = () => {
           </Text>
           <Button>Оставить заявку</Button>
         </div>
-        <div className={scss.imageBlock}>
-          <img
-            className={scss.image}
-            src={`${HOST}images/info-bg.png`}
-            alt=""
-          />
-        </div>
+        <Figure src='images/info-bg.png' parentClass={scss.imageBlock} />
       </Container>
     </div>
   );
