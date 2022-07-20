@@ -1,0 +1,72 @@
+@import "src/style/colorVariables";
+
+.arrow {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid $blue;
+  border-radius: 15px;
+  margin: 0 15px;
+  cursor: pointer;
+
+  &:active {
+    background: $blue;
+
+    .arrowTop,
+    .arrowBottom {
+      background: $fontWhite;
+    }
+  }
+
+  .arrowTop,
+  .arrowBottom {
+    background: $fontDark;
+    height: 2px;
+    position: absolute;
+    width: 24px;
+    top: 50%;
+    right: 40%;
+
+  }
+
+
+  .arrowTop {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+
+  .arrowBottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+
+}
+
+.left {
+
+
+  .arrowTop,
+  .arrowBottom {
+    background: $fontDark;
+    height: 2px;
+    position: absolute;
+    width: 24px;
+    top: 50%;
+    left: 30%;
+
+  }
+
+
+  .arrowTop {
+    transform: rotate(45deg);
+    transform-origin: bottom left;
+
+  }
+
+  .arrowBottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+
+  }
+
+}

@@ -1,9 +1,9 @@
 import scss from './exampleCard.module.scss';
 import ExampleCardItem from './ExampleCardItem';
-import { HOST } from '../../App';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import debounce from '../../functions/debounce';
 import { arrayToArrays } from '../../functions/ArrayToArrays';
+import ArrowButton from '../UI/ArrowButton/ArrowButton';
 
 const list = [
   {
@@ -79,7 +79,7 @@ const ExampleCardList = () => {
   }, 200);
 
   useEffect(() => {
-    console.log(page);
+
     if (window.innerWidth <= 1000) {
       setMobile(true);
     }
@@ -98,25 +98,9 @@ const ExampleCardList = () => {
           ))
       }
       <div className={scss.buttons}>
-        <button
-          onClick={previousImageHandle}
-          style={{
-            background: `url(${HOST}images/arrow-left.svg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-          className={scss.button}
-        />
 
-        <button
-          onClick={nextImageHandle}
-          style={{
-            background: `url(${HOST}images/arrow-right.svg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-          className={scss.button}
-        />
+        <ArrowButton onClick={previousImageHandle} left />
+        <ArrowButton onClick={nextImageHandle} />
       </div>
     </ul>
   );

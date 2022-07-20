@@ -13,6 +13,13 @@
       border: 2px solid $blue;
       border-radius: 15px;
       display: none;
+
+    }
+    .nextItem {
+      animation: slide-next 1s ease;
+    }
+    .prevItem {
+      animation: slide-prev 1s ease ;
     }
 
     .textBlock {
@@ -52,19 +59,9 @@
   }
 
   .buttons {
+    display: flex;
+    justify-content: space-around;
     margin-top: 102px;
-
-    .button {
-      position: relative;
-      margin: 15px;
-      font-size: 20px;
-      width: 60px;
-      height: 60px;
-      background: none;
-      border: 2px solid $blue;
-      border-radius: 15px;
-      cursor: pointer;
-    }
   }
 }
 
@@ -75,6 +72,7 @@
       .item {
         padding: 27px 0;
         min-height: 615px;
+
       }
 
       .textBlock {
@@ -110,5 +108,51 @@
       justify-content: space-around;
       margin-top: 25px;
     }
+  }
+}
+
+@media screen and (min-width: $xm) and(max-width: $xl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and(max-width: $xxl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@keyframes slide-next {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-prev {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

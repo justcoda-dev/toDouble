@@ -5,9 +5,7 @@ import classNames from 'classnames';
 
 const AccordionItem = ({ item }) => {
   const [show, setShow] = useState(false);
-  const itemToggleHandle = useCallback(() => {
-    setShow(!show);
-  }, [show]);
+  const itemToggleHandle = useCallback(() => setShow(!show), [show]);
   return (
     <li className={scss.item} onClick={itemToggleHandle}>
       <Text

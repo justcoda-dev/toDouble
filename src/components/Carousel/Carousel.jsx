@@ -4,6 +4,7 @@ import ThirdTitle from '../ThirdTitle/ThirdTitle';
 import Text from '../UI/Text/Text';
 import classNames from 'classnames';
 import { useCallback, useMemo, useState } from 'react';
+import ArrowButton from '../UI/ArrowButton/ArrowButton';
 
 const list = [
   {
@@ -40,16 +41,18 @@ const list = [
 
 const Carousel = () => {
   const [showItem, setShowItem] = useState(1);
-
+  const [next, setNext] = useState(false);
   const itemsNumber = useMemo(() => list.length, [list]);
 
   const nextImageHandle = useCallback(() => {
+    setNext(false);
     setShowItem((prevCount) =>
       itemsNumber - prevCount === 0 ? 1 : prevCount + 1,
     );
   }, [showItem]);
 
   const previousImageHandle = useCallback(() => {
+    setNext(true);
     setShowItem((prevCount) =>
       itemsNumber - prevCount === itemsNumber - 1 ? itemsNumber : prevCount - 1,
     );
@@ -64,6 +67,8 @@ const Carousel = () => {
               className={classNames({
                 [scss.item]: true,
                 [scss.show]: item.id === showItem,
+                [scss.nextItem]: !next,
+                [scss.prevItem]: next,
               })}
               key={item.id}
             >
@@ -85,25 +90,8 @@ const Carousel = () => {
       </div>
 
       <div className={scss.buttons}>
-        <button
-          onClick={previousImageHandle}
-          style={{
-            background: `url(${HOST}images/arrow-left.svg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-          className={scss.button}
-        />
-
-        <button
-          onClick={nextImageHandle}
-          style={{
-            background: `url(${HOST}images/arrow-right.svg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-          className={scss.button}
-        />
+        <ArrowButton onClick={previousImageHandle} left />
+        <ArrowButton onClick={nextImageHandle} />
       </div>
 
     </div>

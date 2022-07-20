@@ -46,17 +46,9 @@
   }
 
   .buttons {
-    .button {
-      position: relative;
-      margin: 0.9rem;
-      font-size: 20px;
-      width: 60px;
-      height: 60px;
-      background: none;
-      border: 2px solid $blue;
-      border-radius: 15px;
-      cursor: pointer;
-    }
+    display: flex;
+    justify-content: space-around;
+    margin-top: 128px;
   }
 }
 
@@ -71,6 +63,8 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
+      margin-top: 25px;
+      margin-bottom: 45px;
     }
   }
 }
@@ -86,6 +80,8 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
+      margin-top: 25px;
+      margin-bottom: 45px;
     }
   }
 }
