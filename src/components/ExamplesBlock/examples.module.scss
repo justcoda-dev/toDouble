@@ -1,6 +1,9 @@
-@import "src/style/colorVariables";
+@import 'src/style/colorVariables';
+@import 'src/style/media';
 
 .background {
+  display: flex;
+  justify-content: center;
   background: $lightBlue;
 
   .container {
@@ -8,6 +11,22 @@
 
     .title {
       margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .background {
+    .container {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    .container {
+      padding: 0;
     }
   }
 }

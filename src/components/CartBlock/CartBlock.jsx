@@ -5,17 +5,16 @@ import { HOST } from '../../App';
 import Text from '../UI/Text/Text';
 import Button from '../UI/Button/Button';
 
-const src = 'images/banner_1.jpg';
 const CartBlock = () => {
   return (
     <div
-      className={scss.cartBlock}
-      style={{
-        background: `url(${HOST}${src})`,
-        backgroundSize: '100%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+      className={scss.background}
+      // style={{
+      //   background: `url(${HOST}${src})`,
+      //   backgroundSize: '100%',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
     >
       <Container parentClass={scss.container}>
         <div className={scss.inner}>
@@ -25,8 +24,18 @@ const CartBlock = () => {
             кабинета - от фирменного стиля до пользовательского интерфейса в
             сжатые сроки с командой Virtual Designers
           </Text>
-          <Button>Заказать</Button>
+          <Button parentClass={scss.button}>Заказать</Button>
         </div>
+        <div
+          className={scss.cart}
+          style={{
+            background: `url(${HOST}images/cart-block/cart.png)`,
+            backgroundSize: '100%',
+
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
       </Container>
     </div>
   );

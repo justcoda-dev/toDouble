@@ -14,15 +14,14 @@ const ExampleCardItem = ({ item }) => {
       onMouseOver={hoverHandleOver}
       className={scss.item}
     >
-      {
-        hover
-          ? <div className={scss.textBlock}>
-            <ThirdTitle parentClass={scss.title}>{item.title}</ThirdTitle>
-            <Text parenClass={scss.text}>{item.text}</Text>
-          </div>
-          : <img className={scss.image} src={`${HOST}${item.image}`} alt='' />
-
-      }
+      {hover ? (
+        <div className={scss.textBlock}>
+          <ThirdTitle parentClass={scss.title}>{item.title}</ThirdTitle>
+          <Text parenClass={scss.text}>{item.text}</Text>
+        </div>
+      ) : (
+        <img className={scss.image} src={`${HOST}${item.image}`} alt="" />
+      )}
     </li>
   );
 };

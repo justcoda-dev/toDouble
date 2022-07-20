@@ -7,7 +7,9 @@ const CarouselBlock = () => {
   return (
     <div className={scss.background}>
       <Container parentClass={scss.container}>
-        <SecondTitle parentClass={scss.title}>Этапы разработки интернет-магазина</SecondTitle>
+        <SecondTitle parentClass={scss.title}>
+          Этапы разработки интернет-магазина
+        </SecondTitle>
         <Carousel />
       </Container>
     </div>

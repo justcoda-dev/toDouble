@@ -10,17 +10,23 @@ const AccordionItem = ({ item }) => {
   }, [show]);
   return (
     <li className={scss.item} onClick={itemToggleHandle}>
-      <Text parenClass={classNames({
-        [scss.title]: true,
-        [scss.open]: show,
-      })}>{item.title}</Text>
-      <div className={classNames({
-        [scss.collapse]: true,
-        [scss.show]: show,
-      })
-      }>
+      <Text
+        parenClass={classNames({
+          [scss.title]: true,
+          [scss.open]: show,
+        })}
+      >
+        {item.title}
+      </Text>
+      <div
+        className={classNames({
+          [scss.collapse]: true,
+          [scss.show]: show,
+        })}
+      >
         <Text parenClass={scss.text}>{item.text}</Text>
       </div>
-    </li>);
+    </li>
+  );
 };
 export default AccordionItem;

@@ -1,14 +1,55 @@
-@import "src/style/colorVariables";
+@import 'src/style/colorVariables';
+@import 'src/style/media';
 
 .background {
+  display: flex;
+  justify-content: center;
   background: $lightBlue;
-  min-height: 43.94rem;
 
   .container {
-    padding: 7.5rem 0;
+    padding: 120px 0;
   }
 
   .title {
     margin-bottom: 3.125rem;
+  }
+}
+@media screen and (max-width: $xs) {
+  .background {
+    .container {
+      padding-top: 16px;
+      padding-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    .container {
+      padding-top: 16px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    .container {
+      padding-top: 16px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .background {
+    .container {
+    }
+  }
+}
+
+@media screen and (min-width: $xxl) and (max-width: $xxl) {
+  .background {
+    .container {
+    }
   }
 }

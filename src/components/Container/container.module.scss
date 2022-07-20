@@ -1,6 +1,36 @@
+@import 'src/style/media';
+
 .container {
-  margin: 0 1.25rem;
   height: 100%;
+  max-width: 1170px;
 }
 
-//@media {}
+@media screen and (min-width: $xs) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: $xm) {
+  .container {
+    margin: 0 60px;
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .container {
+    margin: 0 120px;
+  }
+}
+
+@media screen and (min-width: $xxl) and (max-width: $xxl) {
+  .container {
+    margin: 0 375px;
+  }
+}

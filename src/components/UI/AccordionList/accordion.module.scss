@@ -1,4 +1,4 @@
-@import "src/style/colorVariables";
+@import 'src/style/colorVariables';
 
 .list {
   margin: 0;
@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
 
-
   .item {
     background: $fontWhite;
     margin: 5px 0;
@@ -16,24 +15,22 @@
     border-radius: 15px;
     cursor: pointer;
 
-
     .title {
       position: relative;
 
       &:before {
         position: absolute;
-        content: "";
+        content: '';
         border-radius: 50%;
         height: 1.5rem;
         width: 1.5rem;
         background: $green;
         left: -55px;
-
       }
 
       &:after {
         position: absolute;
-        content: "";
+        content: '';
         transform: rotate(-135deg);
         border: solid black;
         border-width: 0 1px 1px 0;
@@ -42,7 +39,6 @@
         right: -40px;
         //   transform: rotate(45deg);
       }
-
     }
 
     .collapse {
@@ -54,14 +50,13 @@
 
         &:before {
           position: absolute;
-          content: "";
+          content: '';
           height: calc(100% - 5rem);
           width: 1px;
           background: $fontDark;
           left: -43px;
         }
       }
-
     }
 
     .show {
@@ -81,8 +76,6 @@
       }
     }
   }
-
-
 }
 
 @keyframes animation_show {
@@ -93,6 +86,3 @@
     opacity: 100%;
   }
 }
-
-
-

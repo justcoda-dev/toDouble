@@ -5,18 +5,22 @@ import ServiceTypesBlock from './components/ServiceTypesBlock/ServiceTypesBlock'
 import CarouselBlock from './components/CarouselBlock/CarouselBlock';
 import ExamplesBlock from './components/ExamplesBlock/ExamplesBlock';
 import InfoBlock from './components/InfoBlock/InfoBlock';
+import FormBlock from './components/FormBlock/FormBlock';
+import FooterBlock from './components/FooterBlock/FooterBlock';
 
 export const HOST = 'http://localhost:5000/';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <CartBlock />
       <ServiceTypesBlock />
       <CarouselBlock />
       <ExamplesBlock />
       <InfoBlock />
+      <FormBlock />
+      <FooterBlock />
     </div>
   );
 }

@@ -1,14 +1,45 @@
-@import "src/style/colorVariables";
+@import 'src/style/colorVariables';
+@import 'src/style/media';
 
 .background {
+  display: flex;
+  justify-content: center;
   background: $fontWhite;
-  height: 908px;
 
   .container {
-    padding: 7.5rem 0;
+    padding: 120px 0;
+    width: 100%;
 
     .title {
       margin-bottom: 3.12rem;
     }
   }
+}
+
+// Media
+@media screen and (max-width: $xs) {
+  .background {
+    .container {
+      padding: 42px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and(max-width: $xm) {
+  .background {
+    .container {
+      padding: 62px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and(max-width: $xl) {
+  .background {
+    .container {
+      padding: 100px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and(max-width: $xxl) {
 }

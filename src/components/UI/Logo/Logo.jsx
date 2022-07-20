@@ -1,10 +1,16 @@
-import scss from './logo.mudle.scss';
+import scss from './logo.module.scss';
 import { HOST } from '../../../App';
+import classnames from 'classnames';
 
 const src = 'images/logo.svg';
-const Logo = () => {
+const Logo = ({ parentClass }) => {
   return (
-    <div className={scss.logo}>
+    <div
+      className={classnames({
+        [scss.logo]: true,
+        [parentClass]: !!parentClass,
+      })}
+    >
       <img src={`${HOST}${src}`} alt="" />
     </div>
   );

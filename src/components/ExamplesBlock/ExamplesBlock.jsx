@@ -7,7 +7,9 @@ const ExamplesBlock = () => {
   return (
     <div className={scss.background}>
       <Container parentClass={scss.container}>
-        <SecondTitle parentClass={scss.title}>Примеры онлайн-магазинов</SecondTitle>
+        <SecondTitle parentClass={scss.title}>
+          Примеры онлайн-магазинов
+        </SecondTitle>
         <ExampleCardList />
       </Container>
     </div>

@@ -1,0 +1,18 @@
+@import 'src/style/colorVariables';
+
+.item {
+  display: flex;
+  color: $fontWhite;
+
+  .image {
+    width: 21px;
+    height: 21px;
+    padding-right: 10px;
+  }
+
+  .name {
+  }
+
+  .phone {
+  }
+}

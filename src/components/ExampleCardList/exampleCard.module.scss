@@ -1,4 +1,5 @@
-@import "src/style/colorVariables";
+@import 'src/style/colorVariables';
+@import 'src/style/media';
 
 .list {
   list-style: none;
@@ -43,9 +44,8 @@
       }
     }
   }
+
   .buttons {
-
-
     .button {
       position: relative;
       margin: 0.9rem;
@@ -56,7 +56,62 @@
       border: 2px solid $blue;
       border-radius: 15px;
       cursor: pointer;
+    }
+  }
+}
 
+@media screen and (max-width: $xs) {
+  .list {
+    .item {
+      width: 335px;
+      height: 260px;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .list {
+    .item {
+      width: 355px;
+      height: 290px;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .list {
+    .item {
+      width: 385px;
+      height: 310px;
+    }
+
+    .buttons {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .list {
+    .item {
+      width: 385px;
+      height: 310px;
+    }
+
+    .buttons {
+      display: none;
     }
   }
 }

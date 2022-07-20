@@ -1,0 +1,146 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.background {
+  display: flex;
+  justify-content: center;
+  background: $lightBlue;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+    padding-bottom: 128px;
+    height: 100%;
+    max-width: 480px;
+
+    .phoneLeft {
+      position: absolute;
+      left: -300px;
+      width: 206px;
+      height: 268px;
+
+      .img {
+        width: 206px;
+        height: 268px;
+      }
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .text {
+      margin-bottom: 27px;
+    }
+    .phoneMobile {
+      display: none;
+    }
+    .phoneRight {
+      position: absolute;
+      right: -300px;
+      top: 260px;
+
+      .img {
+        width: 184px;
+        height: 144px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .background {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      .text {
+        text-align: center;
+      }
+
+      .phoneMobile {
+        margin-top: 42px;
+        display: block;
+        .img {
+          height: 290px;
+          width: 290px;
+        }
+      }
+      .phoneLeft {
+        display: none;
+      }
+
+      .phoneRight {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    .container {
+      padding-top: 80px;
+      padding-bottom: 60px;
+
+      .text {
+        text-align: center;
+      }
+
+      .phoneMobile {
+        margin-top: 42px;
+        display: block;
+        .img {
+          height: 290px;
+          width: 290px;
+        }
+      }
+
+      .phoneLeft {
+        display: none;
+      }
+
+      .phoneRight {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    .container {
+      padding-top: 100px;
+      padding-bottom: 80px;
+
+      .text {
+        text-align: center;
+      }
+      .phoneMobile {
+        display: block;
+        .img {
+          height: 350px;
+          width: 350px;
+        }
+      }
+      .phoneLeft {
+        display: none;
+      }
+
+      .phoneRight {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .background {
+    .container {
+    }
+  }
+}
