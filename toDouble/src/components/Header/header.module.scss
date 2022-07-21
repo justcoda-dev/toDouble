@@ -1,0 +1,45 @@
+@import 'src/style/colorVariables';
+
+.header {
+  display: flex;
+  justify-content: center;
+  background: $blue;
+  height: 95px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+  }
+
+  .navigation {
+    display: flex;
+  }
+}
+
+@import 'src/style/media';
+
+@media screen and (max-width: $xs) {
+  .header {
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: $xm) {
+  .header {
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: $xl) {
+  .header {
+  }
+}
+
+@media screen and (max-width: $xxl) {
+  .header {
+  }
+}

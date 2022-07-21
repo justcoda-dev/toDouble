@@ -1,0 +1,203 @@
+@import 'src/style/media';
+@import 'src/style/colorVariables';
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 766px;
+  background: #ffffff;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .sphere {
+      position: absolute;
+      left: -5%;
+      top: 100px;
+
+      width: 52px;
+      height: 52px;
+    }
+
+    .wave {
+      position: absolute;
+      left: -15%;
+      bottom: 100px;
+      width: 171px;
+      height: 63px;
+    }
+
+    .inner {
+      .button {
+        margin-top: 60px;
+      }
+    }
+
+    .cart {
+      position: absolute;
+      right: 0;
+      height: 609px;
+      width: 599px;
+      z-index: 1;
+
+    }
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .circle {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 548px;
+    width: 609px;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .background {
+    height: 732px;
+    display: flex;
+
+
+    .circle {
+      top: 0;
+      height: 348px;
+      width: 209px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      .wave {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        left: 0;
+        top: 50px;
+      }
+
+      .inner {
+        display: block;
+        width: 100%;
+
+        .button {
+          margin-top: 34px;
+          margin-bottom: 50px;
+        }
+      }
+
+      .cart {
+        position: relative;
+        width: 204px;
+        height: 209px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    height: 732px;
+    display: flex;
+
+    .circle {
+      height: 348px;
+      width: 209px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      .wave {
+        width: 80px;
+        height: 30px;
+        left: 0;
+        top: 50px;
+      }
+
+      .inner {
+        display: block;
+        width: 100%;
+
+        .button {
+          margin-top: 34px;
+          margin-bottom: 50px;
+        }
+      }
+
+      .cart {
+        position: relative;
+        width: 204px;
+        height: 209px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    .circle {
+      position: absolute;
+      right: 0;
+      top: 20%;
+      height: 448px;
+      width: 409px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .cart {
+        display: block;
+        width: 330px;
+        height: 320px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .background {
+    .circle {
+      position: absolute;
+      right: 0;
+      top: 20%;
+      height: 548px;
+      width: 509px;
+    }
+
+    .container {
+      .cart {
+        position: relative;
+        justify-self: flex-start;
+        width: 460px;
+        height: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .background {
+    .container {
+      .cart {
+        height: 609px;
+        width: 599px;
+      }
+    }
+  }
+}

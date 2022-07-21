@@ -1,0 +1,17 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  .item {
+    margin: 0 19px;
+
+    .src {
+      .image {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import 'src/style/colorVariables';
+
+.title {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: $fontDark;
+}
+
+@import 'src/style/media';
+@media screen and (max-width: $xs) {
+  .title {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+}
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .title {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .title {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: $xxl) and (max-width: $xxl) {
+  .title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

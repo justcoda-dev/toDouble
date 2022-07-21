@@ -1,0 +1,142 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: $lightBlue;
+
+
+  .phoneRight {
+    position: absolute;
+    height: 250px;
+    width: 270px;
+    top: 300px;
+    right: 10%;
+  }
+
+  .phoneLeft {
+    position: absolute;
+    height: 250px;
+    width: 270px;
+    top: 300px;
+    left: 10%;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+    padding-bottom: 128px;
+    height: 100%;
+    max-width: 480px;
+
+    .phoneMobile {
+      margin-top: 40px;
+      height: 330px;
+      width: 330px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .text {
+      margin-bottom: 27px;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .background {
+    .phoneLeft {
+      display: none;
+    }
+
+    .phoneRight {
+      display: none;
+    }
+
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      .text {
+        text-align: center;
+      }
+
+
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    .phoneLeft {
+      display: none;
+    }
+
+    .phoneRight {
+      display: none;
+    }
+
+    .container {
+      padding-top: 80px;
+      padding-bottom: 60px;
+
+      .text {
+        text-align: center;
+      }
+
+
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    .phoneLeft {
+      display: none;
+    }
+
+    .phoneRight {
+      display: none;
+    }
+
+    .container {
+      padding-top: 100px;
+      padding-bottom: 80px;
+
+      .phoneMobile {
+        display: block;
+      }
+
+      .text {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .background {
+    .phoneMobile {
+      display: none;
+    }
+
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .background {
+    .phoneMobile {
+      display: none;
+    }
+  }
+}

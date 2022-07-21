@@ -1,0 +1,89 @@
+@import 'src/style/colorVariables';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    background: $fontWhite;
+    margin: 5px 0;
+    padding: 0.9rem 4.38rem 0.9rem 5.93rem;
+    border-radius: 15px;
+    cursor: pointer;
+
+    .title {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+        background: $green;
+
+        left: -55px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        transform: rotate(-135deg);
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 7px;
+        right: -40px;
+        bottom: 0;
+      }
+    }
+
+    .collapse {
+      display: none;
+
+      .text {
+        position: relative;
+        padding: 2.5rem 0;
+
+        &:before {
+          position: absolute;
+          content: '';
+          height: calc(100% - 5rem);
+          width: 1px;
+          background: $fontDark;
+          left: -43px;
+        }
+      }
+    }
+
+    .show {
+      display: block;
+      animation: animation_show 1s;
+    }
+
+    .open {
+      font-weight: 700;
+
+      &:before {
+        background: $blue;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@keyframes animation_show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

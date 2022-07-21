@@ -1,0 +1,128 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.background {
+  .display {
+    display: flex;
+    justify-content: center;
+    min-height: 394px;
+
+    .item {
+      max-width: 694px;
+      padding: 60px 0;
+      border: 2px solid $blue;
+      border-radius: 15px;
+      display: none;
+    }
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      max-width: 50%;
+
+      .title {
+        text-align: start;
+      }
+
+      .text {
+        text-align: start;
+      }
+    }
+
+    .imageBlock {
+      max-width: 250px;
+      max-height: 250px;
+
+      .image {
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 102px;
+  }
+}
+
+
+@media screen and (max-width: $xs) {
+  .background {
+    .display {
+      .item {
+        padding: 27px 0;
+        min-height: 615px;
+      }
+
+      .textBlock {
+        max-width: 100%;
+        padding: 0 30px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and(max-width: $xm) {
+  .background {
+    .display {
+      .item {
+        padding: 27px 0;
+        min-height: 615px;
+      }
+
+      .textBlock {
+        max-width: 100%;
+        padding: 0 30px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and(max-width: $xl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and(max-width: $xxl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .background {
+    .buttons {
+      justify-content: center;
+    }
+  }
+}

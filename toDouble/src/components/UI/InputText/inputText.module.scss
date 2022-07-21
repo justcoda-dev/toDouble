@@ -1,0 +1,43 @@
+@import 'src/style/colorVariables';
+
+.inputWrapper {
+  padding: 5px 0;
+
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 58px;
+    border-radius: 10px;
+    outline: solid 1px $blue;
+    padding: 0 14px;
+    color: #292929;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: #939393;
+    }
+
+    &:focus {
+      outline: solid 2px $blue;
+    }
+
+    border: none;
+  }
+
+  .error {
+    outline: 1px solid red;
+    border: none;
+
+    &:focus {
+      outline: 2px solid red;
+      border: none;
+    }
+  }
+
+  .helpText {
+    display: block;
+    padding: 2px 0;
+    min-height: 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.list {
+  display: flex;
+  align-items: center;
+
+  .item {
+    text-decoration: none;
+    margin: 0 18px;
+    color: $fontWhite;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: $xs) {
+}
+
+@media screen and (min-width: $xm) {
+}
+
+@media screen and (min-width: $xl) {
+}
+
+@media screen and (min-width: $xxl) {
+}

@@ -1,0 +1,136 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.background {
+  min-height: 469px;
+  background: $blue;
+  color: $fontWhite;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .contacts {
+      position: relative;
+      margin-top: 50px;
+      display: flex;
+      height: 300px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        margin-bottom: 50px;
+      }
+
+      .social {
+        position: absolute;
+        left: -20px;
+        bottom: 90px;
+      }
+
+      .phones {
+        display: flex;
+        flex-direction: column;
+
+        .phoneItem {
+          margin: 6px 0;
+          font-size: 1.25rem;
+        }
+      }
+
+      .website {
+      }
+    }
+  }
+
+  .developer {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .background {
+    min-height: 600px;
+
+    .container {
+      .contacts {
+        .social {
+          position: relative;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and (max-width: $xm) {
+  .background {
+    min-height: 600px;
+
+    .container {
+      .contacts {
+        .social {
+          position: relative;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and (max-width: $xl) {
+  .background {
+    min-height: 600px;
+
+    .container {
+      .contacts {
+        .social {
+          position: relative;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      width: 100%;
+
+      .contacts {
+        flex-direction: row;
+        align-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      width: 100%;
+
+      .contacts {
+        flex-direction: row;
+        align-content: space-between;
+      }
+    }
+  }
+}

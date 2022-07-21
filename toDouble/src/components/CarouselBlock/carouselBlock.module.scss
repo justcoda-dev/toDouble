@@ -1,0 +1,96 @@
+@import 'src/style/colorVariables';
+@import 'src/style/media';
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: $fontWhite;
+
+  .sphere {
+    position: absolute;
+    left: 20%;
+    top: 150px;
+    width: 67px;
+    height: 67px;
+  }
+
+  .wave {
+    position: absolute;
+    right: 20%;
+    bottom: 100px;
+    width: 190px;
+    height: 70px;
+  }
+
+  .container {
+    padding: 120px 0;
+    width: 100%;
+
+    .title {
+      margin-bottom:50px;
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: $xs) {
+  .background {
+    .sphere {
+      left: -10%;
+    }
+
+    .wave {
+      display: none;
+    }
+
+    .container {
+      padding: 42px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) and(max-width: $xm) {
+  .background {
+    .sphere {
+      left: -5%;
+    }
+    .wave {
+      display: none;
+    }
+    .container {
+      padding: 62px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xm) and(max-width: $xl) {
+  .background {
+    .sphere {
+      left: -5%;
+    }
+    .wave {
+      display: none;
+    }
+    .container {
+      padding: 100px 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) and(max-width: $xxl) {
+  .background {
+    .sphere {
+      left: 0;
+    }
+    .wave {
+    right: 5%;
+    }
+    .container {
+      padding: 100px 0;
+
+    }
+
+  }
+}
+

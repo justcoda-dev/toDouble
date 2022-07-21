@@ -1,0 +1,8 @@
+@import 'style/colorVariables';
+@import 'style/fonts';
+
+.App {
+  font-family: $fontFamily;
+  color: $fontDark;
+  text-align: center;
+}

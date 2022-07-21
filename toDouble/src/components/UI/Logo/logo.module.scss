@@ -1,0 +1,46 @@
+@import 'src/style/media';
+
+.logo {
+  width: 242px;
+  height: 59px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: $xs) {
+  .logo {
+    width: 136px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .logo {
+    width: 136px;
+    height: 35px;
+  }
+}
+
+@media screen and (min-width: $xm) {
+  .logo {
+    width: 156px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .logo {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: $xxl) {
+  .logo {
+    width: 242px;
+    height: 59px;
+  }
+}
