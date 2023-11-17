@@ -8,7 +8,7 @@ import InfoBlock from './components/InfoBlock/InfoBlock';
 import FormBlock from './components/FormBlock/FormBlock';
 import FooterBlock from './components/FooterBlock/FooterBlock';
 
-export const HOST = 'http://localhost:5000/';
+export const HOST = 'https://todouble-73e02.web.app/';
 
 function App() {
   return (

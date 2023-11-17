@@ -19,6 +19,8 @@
 
     &:focus {
       outline: solid 2px $blue;
+      border-radius: 10px;
+
     }
 
     border: none;
@@ -26,10 +28,12 @@
 
   .error {
     outline: 1px solid red;
+    
     border: none;
 
     &:focus {
       outline: 2px solid red;
+      border-radius: 10px;
       border: none;
     }
   }

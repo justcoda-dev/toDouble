@@ -3,16 +3,16 @@
 .button {
   color: $fontWhite;
   background: $green;
-  height: 2.4rem;
-  padding: 0 2.8rem;
-  border-radius: 0.31rem;
+  height: 38px;
+  padding: 0 45px;
+  border-radius: 5px;
   border: none;
-  font-size: 0.94rem;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
 
   &:hover {
-    outline: 0.125rem solid $fontWhite;
+    outline: 2px solid $fontWhite;
   }
 
   &:active {

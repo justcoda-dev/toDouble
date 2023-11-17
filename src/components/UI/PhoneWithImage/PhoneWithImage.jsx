@@ -1,6 +1,7 @@
 import scss from './phoneWithimage.module.scss';
 import { HOST } from '../../../App';
 import classnames from 'classnames';
+import Text from '../Text/Text';
 
 const PhoneWithImage = ({ item, parentClass }) => {
   return (
@@ -10,10 +11,10 @@ const PhoneWithImage = ({ item, parentClass }) => {
         [parentClass]: !!parentClass,
       })}
     >
-      <img className={scss.image} src={`${HOST}${item.image}`} alt="" />
-      <span className={scss.name}>
+      <img className={scss.image} src={`${HOST}${item.image}`} alt='' />
+      <Text>
         {item.name}: {item.phone}
-      </span>
+      </Text>
     </div>
   );
 };
